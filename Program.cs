@@ -26,7 +26,6 @@ namespace Bisection_Algorithm
                 Console.WriteLine($"473 exists at array2 index: {indexValue}\n");
         }
     }
-
     class Bisection
     {
         public int[] GivenArray { get; set; }
