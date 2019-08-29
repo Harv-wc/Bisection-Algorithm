@@ -5,7 +5,7 @@ using System.Text;
 namespace Bisection_Algorithm
 {
 
-    class Bisection
+    class Bisection // Can take in any size array of sorted ints and tell you the index location of a specific number.
     {
         public int[] GivenArray { get; set; }
         public int SearchValue { get; set; }
@@ -20,13 +20,17 @@ namespace Bisection_Algorithm
             this.LowIndex = 0;
             this.HighIndex = givenArray.Length - 1;
         }
-        public int FindIndex(int index = startIndex)
+        public int FindIndex(int index = startIndex) // passed at class construction. Just call FindIndex for that class object. See the Print Test Case function in Program.cs
         {
             // This is needed so I can set the starting index to the center of the array. (GivenArray.Length - 1) / 2 is not a compile-time constant
             if (index == startIndex)
                 index = (GivenArray.Length - 1) / 2;
             //-------------------------------------------//
             // exit logic:
+            if (index == 0 && SearchValue == GivenArray[0]) // handles an array of 1 object.
+                return index;
+            if (index == 0 && SearchValue != GivenArray[0])
+                return -1;
             if (index == 1) // return an index and exit at min array index. Performs checks on first and second position of the array.
             {
                 if (SearchValue == GivenArray[1])
