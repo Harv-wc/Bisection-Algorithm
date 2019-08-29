@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace Bisection_Algorithm
-{
+{   
+/// <summary>
+/// This was expanded on as I went through and get bugs. 
+/// I added extra condition checks to account for each issue.
+/// Definitely not the cleanest. There is probably a much cleaner way of getting the same results
+/// </summary>
+
 
     class Bisection // Can take in any size array of sorted ints and tell you the index location of a specific number.
     {
